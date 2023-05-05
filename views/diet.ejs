@@ -1,0 +1,15 @@
+<h1> Diet Suggestions</h1>
+<% if (dialogue !== null){ %>
+    <h2>Date of the prompt</h2>
+    <h3><%= dialogue.date%></h3>
+<% } else { %>
+    <p>Nothing yet T_T</p>
+<% } %> 
+
+<form method="POST" action="/diet">
+    Which meal you want to have?<br>
+    <input type="text" id ="meal" name="meal" placeholder="Breakfast/Lunch/Dinner"><br>
+    When you had the meal?<br>
+    <input type="text" id ="time" name="time" placeholder="8am/12pm/6pm"><br>
+    <input type="submit" value="prompt"> 
+</form>
