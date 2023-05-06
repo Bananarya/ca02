@@ -1,0 +1,17 @@
+<h1> Country Information </h1>
+<% if (dialogue !== null){ %>
+    <h2>Date of the prompt</h2>
+    <p><%= dialogue.date%></p>
+    <h3>Official Name: <%= dialogue.CountryName %></h3>
+    <h3>region: <%= dialogue.region %></h3>
+    <h3>population: <%= dialogue.population %></h3>
+<% } else { %>
+    <p>Nothing yet T_T</p>
+<% } %> 
+
+<form method="POST" action="/country">
+    Which country you want to learn more?<br>
+    <input type="text" id ="country" name="country" placeholder="Country Name"><br> 
+    <input type="submit" value="prompt"> 
+</form>
+
