@@ -10,6 +10,7 @@ var countrySchema = Schema( {
   capital: String,
   region: String,
   population: Number,
+  maps:Object
 });
 
 module.exports = mongoose.model( 'countryResponse', countrySchema);
