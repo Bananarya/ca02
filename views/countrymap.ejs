@@ -1,0 +1,16 @@
+<h1> Country Map Information </h1>
+<% if (dialogue !== null){ %>
+    <h2>Date of the prompt</h2>
+    <p><%= dialogue.date%></p>
+    <h3>Official Name: <%= dialogue.CountryName %></h3>
+    <h3>maps: <%= JSON.stringify(dialogue.maps) %></h3>
+<% } else { %>
+    <p>No Information for this country yet</p>
+<% } %> 
+
+<form method="POST" action="/countrymap">
+    Which countrymap you want to view?<br>
+    <input type="text" id ="country" name="country" placeholder="Country Name"><br> 
+    <input type="submit" value="prompt"> 
+</form>
+
