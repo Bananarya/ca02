@@ -1,0 +1,20 @@
+<h1> History </h1>
+<% if (dialogue !== null){ %>
+    <h2>Date of the prompt</h2>
+    <p><%= dialogue.date%></p>
+    <h3>Question: <%= dialogue.Question %></h3>
+    <h3>Response: <%= dialogue.Response %></h3>
+<% } else { %>
+    <p>Nothing yet T_T</p>
+<% } %> 
+
+<h2></h2>
+<form method="POST" action="/codeTranslator">
+    <input type="text" id="originalLang" name="originalLang" placeholder="Python" required>
+    <br>
+    <input type="text" id="targetLang" name="targetLang" placeholder="Java" required>
+    <br>
+    <input type="text" id="code" name="code" placeholder="print('I love coding!')" required>
+    <br>
+    <input type="submit" value="Ask">
+</form>
