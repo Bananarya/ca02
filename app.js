@@ -10,6 +10,7 @@ const weatherRouter = require('./routes/weather');
 const countryRouter = require('./routes/country');
 const GPTRouter = require('./routes/ChatGPT');
 const codeTranslator = require('./routes/codeTranslator')
+const countryMapRouter=require('./routes/countrymap');
 
 const User = require('./models/User');
 
@@ -118,6 +119,7 @@ app.use(weatherRouter);
 app.use(countryRouter);
 app.use(GPTRouter);
 app.use(codeTranslator)
+app.use(countryMapRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
