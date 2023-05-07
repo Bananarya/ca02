@@ -21,7 +21,7 @@
     // const data = req.body.country;
 
 const axios = require('axios');
-const express = require('express');
+const express = require('express')
 const countryModel = require('../models/countryModel');
 const router = express.Router();
 const bodyParser = require('body-parser');
@@ -44,7 +44,7 @@ router.get('/country', isLoggedIn, async (req, res) => {
 
 
 router.post('/country', isLoggedIn,
-  async (req,res,) => {
+  async (req,res,) => { 
 
     const options = {
         method: 'GET',
@@ -61,7 +61,7 @@ router.post('/country', isLoggedIn,
         console.log('submitted country: ', countryName)
         const response = await axios.request(options);
         const countryData = response.data;
-        const filteredCountry = countryData.filter(country => country.name.common === countryName)
+        const filteredCountry = countryData.filter(country => country.name.common ===  countryName)
         console.log(filteredCountry[0].name.official)
 
         const officialName = filteredCountry[0].name.official
