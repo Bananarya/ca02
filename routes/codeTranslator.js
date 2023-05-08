@@ -25,8 +25,8 @@ router.get('/codeTranslator', isLoggedIn, async (req, res) => {
 router.post('/codeTranslator', isLoggedIn,
     async (req,res,) => { 
 
-        const question = "Translate the code below from " + req.body.originalLang + " code to " + req.body.targetLang + " code \n\n" + req.body.code + "\n\n";    
-
+        const question = "Translate the code below into " + req.body.Lang + " code \n\n" + req.body.code + "\n\n";
+    
         const options = {
             method: 'POST',
             url: 'https://openai80.p.rapidapi.com/chat/completions',
